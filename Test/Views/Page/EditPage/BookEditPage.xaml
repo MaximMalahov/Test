@@ -1,0 +1,50 @@
+﻿<Page x:Class="Test.Views.Page.EditPage.BookEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d" 
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      d:DesignHeight="320"
+      d:DesignWidth="400"
+      Title="BookEditPage">
+
+    <StackPanel Width="400">
+        <TextBox
+            Name="TBName"
+            md:HintAssist.Hint="Название"
+            md:HintAssist.IsFloating="True"
+            Cursor="IBeam"
+            Text="{Binding Name}"/>
+        <DatePicker
+            Name="TBDate"
+            md:HintAssist.Hint="Год"
+            md:HintAssist.IsFloating="True"
+            DisplayDate="01.01.2022"
+            SelectedDate="{Binding Date}" />
+        <ComboBox
+            Name="CBGenre"
+            Grid.Row="1"
+            Grid.Column="1"
+            md:HintAssist.Hint="Жанр"
+            md:HintAssist.IsFloating="True"
+            DisplayMemberPath="Title"
+            SelectedItem="{Binding Genre}" />
+        <ComboBox
+            Name="CBAuthor"
+            Grid.Row="0"
+            Grid.Column="1"
+            md:HintAssist.Hint="Автор"
+            md:HintAssist.IsFloating="True"
+            DisplayMemberPath="Fullname"
+            SelectedItem="{Binding Author}" />
+        <Button
+            Name="BntSave"
+            Margin="0,5"
+            Click="BntSave_Click"
+            Content="Сохранить"
+            Style="{DynamicResource MaterialDesignPaperButton}" />
+    </StackPanel>
+</Page>

@@ -1,0 +1,33 @@
+﻿<Page x:Class="Test.Views.Page.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d" 
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      d:DesignHeight="260"
+      d:DesignWidth="200"
+      Title="MenuPage">
+
+    <StackPanel Width="200">
+        <Button
+            Name="BtnGenre"
+            Margin="0,2.5"
+            Click="BtnGenre_Click"
+            Content="Жанр"
+            Style="{DynamicResource MaterialDesignPaperButton}" />
+        <Button
+            Name="BtnAuthor"
+            Margin="0,2.5"
+            Click="BtnAuthor_Click"
+            Content="Автор"
+            Style="{DynamicResource MaterialDesignPaperButton}" />
+        <Button
+            Name="BtnBook"
+            Margin="0,2.5"
+            Click="BtnBook_Click"
+            Content="Книги"
+            Style="{DynamicResource MaterialDesignPaperButton}" Cursor="Hand" />
+    </StackPanel>
+</Page>
